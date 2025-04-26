@@ -25,15 +25,15 @@ if not API_KEYS:
 # Define region
 LAT_MIN, LAT_MAX = 24.0, 50.0  # Latitude range
 LON_MIN, LON_MAX = -125.0, -67.0  # Longitude range
-GRID_SIZE = 0.5  # Fine resolution (~11km spacing)
+GRID_SIZE = 0.5  
 REQUESTS_PER_MIN = 60  # API limit per key per minute
 TOTAL_KEYS = len(API_KEYS)
-MAX_REQUESTS_PER_BATCH = TOTAL_KEYS * REQUESTS_PER_MIN  # Max requests per minute
+MAX_REQUESTS_PER_BATCH = TOTAL_KEYS * REQUESTS_PER_MIN  
 MAX_WORKERS = min(TOTAL_KEYS * 5, 20)  # Limit threads
 
 # Input and output CSV files
 LAND_CSV_FILE = "updated_output.csv"  # CSV containing lat, lon, and is_land values
-OUTPUT_CSV_FILE = "aqi_data_parallel_optimized_5.csv"
+OUTPUT_CSV_FILE = "aqi_data_parallel_optimized_13_apr.csv"
 
 # Load land data into a dictionary for quick lookup
 land_data = {}
